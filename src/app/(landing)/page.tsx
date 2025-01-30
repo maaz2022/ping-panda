@@ -94,7 +94,30 @@ const Page = () => {
                   </MaxWidthWrapper>
                </div>
     </section>
-    <section></section>
+    <section className="bg-brand-25 relative py-24 sm:py-32">
+      <MaxWidthWrapper className="flex flex-col items-center gap-16 sm:gap-20">
+        <div className="relative mx-auto text-center flex flex-col items-center gap-10">
+          <div>
+            <h2 className=" text-center text-base/7 font-semibold text-brand-600">
+              Inituative Monitoring
+            </h2>
+            <Heading>
+              Stay Ahead with Real-Time Insights
+            </Heading>
+          </div>
+          <div className="grid gap-4 lg:grid-cols-3 lg:grid-rows-2">
+            <div className="relative lg:row-span-2 ">
+              <div className="absolute inset-px rounded-lg bg-white lg:rounded-l-[2rem]" />
+              <div className="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)] lg:rounded-l-[calc(2rem+1px)]">
+                    <div>
+                      
+                    </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </MaxWidthWrapper>
+    </section>
     <section></section>
     <section></section>
   </>

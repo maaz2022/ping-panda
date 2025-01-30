@@ -35,8 +35,8 @@ export const DiscordMessage = ({
   timestamp,
   title,
   username,
-  badgeColor = "#43b581",
-  badgeText,
+  badgeColor = "#43b581", 
+  badgeText = "New",
 }: DiscordMessageProps) => {
   return (
     <div className="w-full flex items-start justify-start">

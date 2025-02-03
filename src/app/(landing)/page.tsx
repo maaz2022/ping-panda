@@ -57,10 +57,11 @@ const Page = () => {
                     badgeColor="#43b581"
                     title="👤 New user signed up"
                     content={{
-                      name: "Mateo Ortiz",
-                      email: "m.ortiz19@gmail.com",
+                      name: "Muhammad Maaz",
+                      email: "muhammadmaaz@email.com",
                     }}
                   />
+
                   <DiscordMessage
                     avatarSrc="/brand-asset-profile-picture.png"
                     avatarAlt="PingPanda Avatar"
@@ -71,7 +72,7 @@ const Page = () => {
                     title="💰 Payment received"
                     content={{
                       amount: "$49.00",
-                      email: "zoe.martinez2001@email.com",
+                      email: "muhammadmaaz@email.com",
                       plan: "PRO",
                     }}
                   />
@@ -109,8 +110,13 @@ const Page = () => {
             <div className="relative lg:row-span-2 ">
               <div className="absolute inset-px rounded-lg bg-white lg:rounded-l-[2rem]" />
               <div className="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)] lg:rounded-l-[calc(2rem+1px)]">
-                    <div>
-                      
+                    <div className="px-8 pb-3 pt-8 sm:px-10 sm:pb-0 sm:pt-10">
+                      <p className="mt-2 text-lg/7 font-medium tracking-tight text-gray-950 max-lg:text-center">
+                        Real-Time Notifications
+                      </p>
+                      <p className="mt-2 max-w-lg text-sm/6 text-gray-600 max-lg:text-center">
+                        Get instant notifications for critical events, such as new users, payments, and more..
+                      </p>
                     </div>
               </div>
             </div>

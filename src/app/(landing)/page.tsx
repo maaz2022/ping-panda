@@ -5,6 +5,7 @@ import { ShinyButton } from "@/components/Shiny-Button"
 import { MockDiscordUI } from "@/components/Mock_discord_ui"
 import { AnimatedList } from "@/components/ui/animated-list"
 import { DiscordMessage } from "@/components/discord-message"
+import Image from "next/image"
 const Page = () => {
   return (
     <>
@@ -93,7 +94,7 @@ const Page = () => {
                       </MockDiscordUI>
                     </div>
                   </MaxWidthWrapper>
-               </div>
+               </div> 
     </section>
     <section className="bg-brand-25 relative py-24 sm:py-32">
       <MaxWidthWrapper className="flex flex-col items-center gap-16 sm:gap-20">
@@ -102,7 +103,7 @@ const Page = () => {
             <h2 className=" text-center text-base/7 font-semibold text-brand-600">
               Inituative Monitoring
             </h2>
-            <Heading>
+            <Heading> 
               Stay Ahead with Real-Time Insights
             </Heading>
           </div>
@@ -117,6 +118,16 @@ const Page = () => {
                       <p className="mt-2 max-w-lg text-sm/6 text-gray-600 max-lg:text-center">
                         Get instant notifications for critical events, such as new users, payments, and more..
                       </p>
+                    </div>
+              </div>
+              <div className="relative min-h-[30rem] w-full grow [container-type:inline-size] max-lg:mx-auto max-lg:max-w-sm">
+                    <div className="absolute inset-x-10 bottom-0 top-10 overflow-hidden rounded-t-[12cqw] border-x-[3cqw] border-t-[3cqw] border-gray-700 bg-gray-900 shadow-2xl">
+                    <Image
+                      className="size-full object-cover object-top"
+                      src="/phone-screen.png"
+                      alt="PingPanda Dashboard Preview"
+                      fill
+                    />
                     </div>
               </div>
             </div>

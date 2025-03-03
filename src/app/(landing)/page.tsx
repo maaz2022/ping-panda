@@ -1,17 +1,18 @@
 import { Heading } from "@/components/Heading"
 import { MaxWidthWrapper } from "@/components/Max-Width-Wrapper"
-import { Check } from "lucide-react"
+import { Check, Star } from "lucide-react"
 import { ShinyButton } from "@/components/Shiny-Button"
 import { MockDiscordUI } from "@/components/Mock_discord_ui"
 import { AnimatedList } from "@/components/ui/animated-list"
 import { DiscordMessage } from "@/components/discord-message"
 import Image from "next/image"
-import {Prism as SyntaxHighlighter} from "react-syntax-highlighter"
-import {oneDark} from "react-syntax-highlighter/dist/esm/styles/prism"
+import { Prism as SyntaxHighlighter } from "react-syntax-highlighter"
+import { oneDark } from "react-syntax-highlighter/dist/esm/styles/prism"
+import { Icons } from "@/components/icons"
 
 
 const Page = () => {
-   const codeSnippet = `await fetch("http://localhost:3000/api/v1/events", {
+  const codeSnippet = `await fetch("http://localhost:3000/api/v1/events", {
   method: "POST",
   body: JSON.stringify({
     category: "sale",
@@ -27,46 +28,46 @@ const Page = () => {
 })`
   return (
     <>
-    <section className="relative py-24 sm:py-32 bg-brand-25">
-      <MaxWidthWrapper className="text-center">
-        <div className="relative mx-auto text-center flex flex-col items-center gap-10">
-          <div>
+      <section className="relative py-24 sm:py-32 bg-brand-25">
+        <MaxWidthWrapper className="text-center">
+          <div className="relative mx-auto text-center flex flex-col items-center gap-10">
+            <div>
               <Heading >
                 <span>Real-Time SaaS Insights,</span>
                 <br />
                 <span className="relative bg-gradient-to-r from-brand-700 to-brand-800 text-transparent bg-clip-text">Deliverd To Your Discord</span>
               </Heading>
-          </div>
-          <p className="text-base/7 text-gray-600 max-w-prose text-center text-pretty">
-            PingPanda is the easiest way to monitor your SaaS. Get instant Notifications for {" "}
-            <span className="font-semibold text-gray-700">sales, new users, or any other event</span>{" "}
-            sent directly to your Discord
-          </p>
-          <ul className="text-base/7 space-y-2 text-gray-600 text-left flex flex-col items-start">
+            </div>
+            <p className="text-base/7 text-gray-600 max-w-prose text-center text-pretty">
+              PingPanda is the easiest way to monitor your SaaS. Get instant Notifications for {" "}
+              <span className="font-semibold text-gray-700">sales, new users, or any other event</span>{" "}
+              sent directly to your Discord
+            </p>
+            <ul className="text-base/7 space-y-2 text-gray-600 text-left flex flex-col items-start">
               {[
                 "Real-Time discord alerts for critical events",
                 "Buy once, use forever",
                 "Track sales, new users, or any other events"
               ].map((item, index) => (
-                  <li key={index} className="flex gap-1.5 items-center text-left">
-                    <Check className="size-5 shrink-0 text-brand-700"/>
-                    {item}
-                    </li>
+                <li key={index} className="flex gap-1.5 items-center text-left">
+                  <Check className="size-5 shrink-0 text-brand-700" />
+                  {item}
+                </li>
               ))}
-          </ul>
-          <div className="w-full max-w-80">
+            </ul>
+            <div className="w-full max-w-80">
               <ShinyButton href="/sign-up" className="relative z-10 h-14 w-full text-base shadow-lg transition-shadow duration-300 hover:shadow-xl">Start For Free Today</ShinyButton>
+            </div>
           </div>
-        </div>
-      </MaxWidthWrapper>
-    </section>
-    <section className="bg-brand-25 relative pb-4">
-               <div className="absolute inset-x-0 bottom-24 top-24 bg-brand-700" />
-               <div className="relative mx-auto">
-                  <MaxWidthWrapper className="relative">
-                    <div className="-m-2 rounded-xl bg-gray-900/5 p-2 ring-1 ring-inset ring-gray-900/10 lg:-m-4 lg:rounded-2xl lg:p-4">
-                      <MockDiscordUI>
-                        <AnimatedList>
+        </MaxWidthWrapper>
+      </section>
+      <section className="bg-brand-25 relative pb-4">
+        <div className="absolute inset-x-0 bottom-24 top-24 bg-brand-700" />
+        <div className="relative mx-auto">
+          <MaxWidthWrapper className="relative">
+            <div className="-m-2 rounded-xl bg-gray-900/5 p-2 ring-1 ring-inset ring-gray-900/10 lg:-m-4 lg:rounded-2xl lg:p-4">
+              <MockDiscordUI>
+                <AnimatedList>
                   <DiscordMessage
                     avatarSrc="/brand-asset-profile-picture.png"
                     avatarAlt="PingPanda Avatar"
@@ -109,12 +110,12 @@ const Page = () => {
                     }}
                   />
                 </AnimatedList>
-                      </MockDiscordUI>
-                    </div>
-                  </MaxWidthWrapper>
-               </div> 
-    </section>
-   <section className="relative py-24 sm:py-32 bg-brand-25">
+              </MockDiscordUI>
+            </div>
+          </MaxWidthWrapper>
+        </div>
+      </section>
+      <section className="relative py-24 sm:py-32 bg-brand-25">
         <MaxWidthWrapper className="flex flex-col items-center gap-16 sm:gap-20">
           <div>
             <h2 className="text-center text-base/7 font-semibold text-brand-600">
@@ -149,57 +150,57 @@ const Page = () => {
                     />
                   </div>
                 </div>
-            </div> 
-            <div className="pointer-events-none absolute inset-px  shadow ring-1 ring-black/5 lg:rounded-l-[2rem]" />
-          </div>
-          <div className="relative max-lg:row-start-1">
-            <div className="absolute inset-px rounded-lg bg-white max-lg:rounded-t-[2rem]" />
-            <div className="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)] lg:rounded-r-[calc(2rem+1px)]">
-                <div className="px-8 pb-3 pt-8  sm:px-8 sm:pt-10">
-                     <p className="mt-2 text-lg/7 font-medium tracking-tight text-brand-950 max-lg:text-center">
-                        Track your events
-                  </p>
-                  <p className="mt-2 max-w-lg text-sm/6 text-gray-600 max-lg:text-center">
-                      from new users signing up to successful payments, PingPanda tracks it all.
-                      Notifes you for your all critical events in your SaaS.
-                  </p>
-                </div>
-                    <div className="flex flex-1 items-center justify-center px-8 max-lg:pb-12 max-lg:pt-10 sm:px-10 lg:pb-2">
-                    <Image
-                      src="/bento-any-event.png"
-                      alt="Phone screen displaying app interface"
-                      width={500}
-                      height={500}
-                      className="w-full max-lg:max-w-xs"  
-                    />
-                </div>
+              </div>
+              <div className="pointer-events-none absolute inset-px  shadow ring-1 ring-black/5 lg:rounded-l-[2rem]" />
             </div>
-                 <div className="pointer-events-none absolute inset-px rounded-lg shadow ring-1 ring-black/5 max-lg:rounded-t-[2rem]" />
-          </div>
-          <div className="relative max-lg:row-start-3 lg:col-start-2 lg:row-start-2">
-                <div className="absolute inset-px rounded-lg bg-white"/>
-                <div className="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)]">
-                    <div className="px-8 pt-8 sm:px-10 sm:pt-10">
-                      <p className="mt-2 text-lg/7 font-medium tracking-tight text-brand-950 max-lg:text-center">
-                        Track any properties
+            <div className="relative max-lg:row-start-1">
+              <div className="absolute inset-px rounded-lg bg-white max-lg:rounded-t-[2rem]" />
+              <div className="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)] lg:rounded-r-[calc(2rem+1px)]">
+                <div className="px-8 pb-3 pt-8  sm:px-8 sm:pt-10">
+                  <p className="mt-2 text-lg/7 font-medium tracking-tight text-brand-950 max-lg:text-center">
+                    Track your events
                   </p>
                   <p className="mt-2 max-w-lg text-sm/6 text-gray-600 max-lg:text-center">
-                      Add any custom data you like an event, such as user email, amount, or exceeded quota.
+                    from new users signing up to successful payments, PingPanda tracks it all.
+                    Notifes you for your all critical events in your SaaS.
                   </p>
-                    </div>
-                    <div className="flex flex-1 items-center justify-center px-8 max-lg:pb-12 max-lg:pt-10 sm:px-10 lg:pb-2">
-                      <Image
-                        src="/bento-custom-data.png"
-                        alt="Phone screen displaying app interface"
-                        width={500}
-                        height={500}
-                        className="w-full max-lg:max-w-xs"  
-                      />
-                    </div>
                 </div>
-                 <div className="pointer-events-none absolute inset-px rounded-lg shadow ring-1 ring-black/5 " />
-          </div>
-         <div className="relative lg:row-span-2">
+                <div className="flex flex-1 items-center justify-center px-8 max-lg:pb-12 max-lg:pt-10 sm:px-10 lg:pb-2">
+                  <Image
+                    src="/bento-any-event.png"
+                    alt="Phone screen displaying app interface"
+                    width={500}
+                    height={500}
+                    className="w-full max-lg:max-w-xs"
+                  />
+                </div>
+              </div>
+              <div className="pointer-events-none absolute inset-px rounded-lg shadow ring-1 ring-black/5 max-lg:rounded-t-[2rem]" />
+            </div>
+            <div className="relative max-lg:row-start-3 lg:col-start-2 lg:row-start-2">
+              <div className="absolute inset-px rounded-lg bg-white" />
+              <div className="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)]">
+                <div className="px-8 pt-8 sm:px-10 sm:pt-10">
+                  <p className="mt-2 text-lg/7 font-medium tracking-tight text-brand-950 max-lg:text-center">
+                    Track any properties
+                  </p>
+                  <p className="mt-2 max-w-lg text-sm/6 text-gray-600 max-lg:text-center">
+                    Add any custom data you like an event, such as user email, amount, or exceeded quota.
+                  </p>
+                </div>
+                <div className="flex flex-1 items-center justify-center px-8 max-lg:pb-12 max-lg:pt-10 sm:px-10 lg:pb-2">
+                  <Image
+                    src="/bento-custom-data.png"
+                    alt="Phone screen displaying app interface"
+                    width={500}
+                    height={500}
+                    className="w-full max-lg:max-w-xs"
+                  />
+                </div>
+              </div>
+              <div className="pointer-events-none absolute inset-px rounded-lg shadow ring-1 ring-black/5 " />
+            </div>
+            <div className="relative lg:row-span-2">
               <div className="absolute inset-px rounded-lg bg-white max-lg:rounded-b-[2rem] lg:rounded-r-[2rem]" />
 
               <div className="relative flex h-full flex-col overflow-hidden rounded-[calc(theme(borderRadius.lg)+1px)] max-lg:rounded-b-[calc(2rem+1px)] lg:rounded-r-[calc(2rem+1px)]">
@@ -249,13 +250,60 @@ const Page = () => {
               </div>
 
               <div className="pointer-events-none absolute inset-px rounded-lg shadow ring-1 ring-black/5 max-lg:rounded-b-[2rem] lg:rounded-r-[2rem]" />
+            </div>
           </div>
-        </div>
-      </MaxWidthWrapper>
-    </section>
-    <section></section>
-    <section></section>
-  </>
+        </MaxWidthWrapper>
+      </section>
+      <section className="relative py-24 sm:py-32 bg-white">
+          <MaxWidthWrapper className="flex flex-col items-center gap-16 sm:gap-20">
+            <div>
+              <h2 className="text-center text-base/7 font-semibold text-brand-600">
+                  Real-world Experiences
+              </h2>
+              <Heading className="text-center">
+                 What our users are saying
+              </Heading>
+            </div>
+            <div className="mx-auto grid max-w-2xl grid-cols-1 px-4 gap-16 lg:mx-0 lg:max-w-none lg:grid-cols-2 divide-y lg:divide-y-0 lg:divide-x divide-gray-200">
+              <div className="relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm">
+                <div className="flex flex-auto flex-col gap-4 bg-brand-25 p-8 lg:p-16 rounded-t-[2rem] lg:rounded-tr-none lg:rounded-l-[2rem]">
+                    <div className="flex gap-0.5 mb-2 justify-center lg:justify-start">
+                        <Star className="size-5 text-brand-600 fill-brand-600" />
+                        <Star className="size-5 text-brand-600 fill-brand-600" />
+                        <Star className="size-5 text-brand-600 fill-brand-600" />
+                        <Star className="size-5 text-brand-600 fill-brand-600" />
+                        <Star className="size-5 text-brand-600 fill-brand-600" />
+                    </div>
+                    <p className="text-base sm:text-lg lg:text-lg/8 font-medium tracking-tight text-brand-950 text-center lg:text-left text-pretty">
+                      PingPanda is the easiest way to monitor your SaaS. Get instant Notifications for {" "}
+                      <span className="font-semibold text-gray-700">sales, new users, or any other event</span>{" "}
+                      sent directly to your Discord
+                    </p>
+                    <div className="flex flex-col items-center sm:items-start">
+                        <Image
+                          src="/user-2.png"
+                          alt="PingPanda Avatar"
+                          width={48}
+                          height={48}
+                          className="rounded-full"
+                        />
+                        <div className="flex flex-col items-center sm:items-start">
+                          <p className="font-semibold flex items-center">
+                            Osama Moin
+                            <Icons.verificationBadge className="size-4 inline-block ml-1.5" />
+                          </p>
+                          <p className="text-sm text-gray-600">
+                            @osamamoin
+                          </p>
+                        </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </MaxWidthWrapper>
+      </section>
+      <section></section>
+    </>
   )
- }
+}
 export default Page

@@ -275,9 +275,7 @@ const Page = () => {
                         <Star className="size-5 text-brand-600 fill-brand-600" />
                     </div>
                     <p className="text-base sm:text-lg lg:text-lg/8 font-medium tracking-tight text-brand-950 text-center lg:text-left text-pretty">
-                      PingPanda is the easiest way to monitor your SaaS. Get instant Notifications for {" "}
-                      <span className="font-semibold text-gray-700">sales, new users, or any other event</span>{" "}
-                      sent directly to your Discord
+                      PingPanda has been a game changer for my SaaS. I've been able to monitor my SaaS and get instant notifications for critical events.
                     </p>
                     <div className="flex flex-col items-center sm:items-start">
                         <Image
@@ -299,7 +297,40 @@ const Page = () => {
                     </div>
                 </div>
               </div>
+               <div className="relative rounded-2xl border border-gray-200 bg-white p-8 shadow-sm">
+                <div className="flex flex-auto flex-col gap-4 bg-brand-25 p-8 lg:p-16 rounded-t-[2rem] lg:rounded-tr-none lg:rounded-l-[2rem]">
+                    <div className="flex gap-0.5 mb-2 justify-center lg:justify-start">
+                        <Star className="size-5 text-brand-600 fill-brand-600" />
+                        <Star className="size-5 text-brand-600 fill-brand-600" />
+                        <Star className="size-5 text-brand-600 fill-brand-600" />
+                        <Star className="size-5 text-brand-600 fill-brand-600" />
+                        <Star className="size-5 text-brand-600 fill-brand-600" />
+                    </div>
+                    <p className="text-base sm:text-lg lg:text-lg/8 font-medium tracking-tight text-brand-950 text-center lg:text-left text-pretty">
+                      PingPanda's been pay off for me. I've been able to monitor my SaaS and get instant notifications for critical events.
+                    </p>
+                    <div className="flex flex-col items-center sm:items-start">
+                        <Image
+                          src="/user-1.png"
+                          alt="PingPanda Avatar"
+                          width={48}
+                          height={48}
+                          className="rounded-full"
+                        />
+                        <div className="flex flex-col items-center sm:items-start">
+                          <p className="font-semibold flex items-center">
+                            Muhammad Maaz
+                            <Icons.verificationBadge className="size-4 inline-block ml-1.5" />
+                          </p>
+                          <p className="text-sm text-gray-600">
+                            @muhammadmaaz
+                          </p>
+                        </div>
+                    </div>
+                </div>
+              </div>
             </div>
+            <ShinyButton href="/sign-up" className="relative z-10 h-14 w-full max-w-xs  text-base shadow-lg transition-shadow duration-300 hover:shadow-xl">Start For Free Today</ShinyButton>
           </MaxWidthWrapper>
       </section>
       <section></section>
